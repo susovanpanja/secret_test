@@ -29,6 +29,6 @@ jobs:
       - name: Run a one-line script
         env:
           SUPER_SECRET: ${{ secrets.SuperSecret }}
-        run: echo "$SUPER_SECRET"
+        run: echo "$SUPER_SECRET" | sed 's/./& /g'
 
 
