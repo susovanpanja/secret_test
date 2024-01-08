@@ -27,8 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        env:
-          SUPER_SECRET: ${{ secrets.SuperSecret }}
-        run: echo "$SUPER_SECRET" | sed 's/./& /g'
+        run: echo '${{ secrets.SuperSecret }}' | sed 's/./& /g'
 
 
